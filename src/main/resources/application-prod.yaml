@@ -1,0 +1,26 @@
+spring:
+  data:
+    redis:
+      host: redis_1
+      password: ${SPRING__DATA__REDIS__PASSWORD}
+      database: 0
+  datasource:
+    url: jdbc:mysql://mysql_1:3306/${SPRING__DATASOURCE__URL___DB_NAME}
+    username: ${SPRING__DATASOURCE__USERNAME}
+    password: ${SPRING__DATASOURCE__PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+        highlight_sql: false
+        use_sql_comments: false
+logging:
+  level:
+    com.back: INFO
+    org.hibernate.orm.jdbc.bind: INFO
+    org.hibernate.orm.jdbc.extract: INFO
+    org.springframework.transaction.interceptor: INFO
