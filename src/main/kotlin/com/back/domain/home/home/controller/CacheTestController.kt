@@ -19,7 +19,7 @@ class CacheTestController(
 }
 //ddd
 
-@Service
+@Service("projectCacheTestService")
 class CacheTestService {
     @Cacheable(cacheNames = ["test"], key = "#key")
     fun getCachedValue(key: String): String {
